@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+        .container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .form-group button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .form-group button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Registration Form</h2>
+        <form action="/submit" method="post">
+            <div class="form-group">
+                <label for="fullName">Full Name</label>
+                <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required>
+            </div>
+            <div class="form-group">
+                <label for="dob">Date of Birth</label>
+                <input type="date" id="dob" name="dob" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <select id="country-code" required>
+                    <option value="+1">+1 (USA)</option>
+                    <option value="+44">+44 (UK)</option>
+                    <option value="+91">+91 (India)</option>
+                    <option value="+977" selected>+977 (Nepal)</option>
+                    <option value="+61">+61 (Australia)</option>
+                </select>
+                <input type="tel" required pattern="[0-9]{10}" placeholder="Enter your phone number" required>
+            </div>
+            <div class="form-group">
+                <label for="academicBatch">Academic Batch</label>
+                <input type="text" id="academicBatch" name="academicBatch" placeholder="Enter your academic batch" required>
+            </div>
+            <div class="form-group">
+                <label for="faculty">Faculty</label>
+                <select id="Faculty" required>
+                    <option value="BCT" selected>BCT</option>
+                    <option value="BCE">BCE</option>
+                    <option value="BEI">BEI</option>
+                    <option value="BEL">BEL</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="about">About Yourself</label>
+                <textarea id="about" name="about" rows="4" placeholder="Tell us about yourself" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+            <div class="form-group">
+                <button type="submit">Register</button>
+            </div>
+            <div class="form-group">
+                <button type="reset">Cancel</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
